@@ -1,5 +1,5 @@
 mod app;
-
+mod ui;
 use app::{App, CurrentScreen, CurrentlyEditing};
 use ratatui::crossterm::event::{
     self, DisableMouseCapture, EnableMouseCapture, Event, KeyCode, KeyEventKind,
@@ -12,6 +12,7 @@ use ratatui::prelude::{Backend, CrosstermBackend};
 use ratatui::Terminal;
 use std::error::Error;
 use std::io;
+use ui::ui;
 
 fn main() -> Result<(), Box<dyn Error>> {
     // setup terminal
